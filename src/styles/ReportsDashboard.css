@@ -1,0 +1,297 @@
+.reports-page {
+  width: 100%;
+  min-height: calc(100vh - 72px);
+  padding: 30px;
+  box-sizing: border-box;
+  background: #f7f8fc;
+}
+
+.reports-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+}
+
+.reports-header-content h1 {
+  margin: 0 0 6px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #171a2b;
+}
+
+.reports-header-content p {
+  margin: 0;
+  color: #74798c;
+  font-size: 14px;
+}
+
+.export-btn {
+  height: 42px;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.export-btn:hover {
+  background: #4338ca;
+  transform: translateY(-1px);
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.chart-card {
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e7e9f0;
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+.revenue-chart-card {
+  min-width: 0;
+}
+
+.status-chart-card {
+  min-width: 0;
+}
+
+.bar-chart-card {
+  margin-bottom: 22px;
+}
+
+.chart-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+.chart-heading h3 {
+  margin: 0 0 4px;
+  color: #1b1e2d;
+  font-size: 16px;
+}
+
+.chart-heading p {
+  margin: 0;
+  color: #858a9c;
+  font-size: 12px;
+}
+
+.chart-label {
+  padding: 6px 10px;
+  border-radius: 5px;
+  background: #f0f1ff;
+  color: #4f46e5;
+  font-size: 12px;
+}
+
+.chart-container {
+  width: 100%;
+  height: 310px;
+}
+
+.bar-chart-container {
+  width: 100%;
+  height: 300px;
+}
+
+.donut-container {
+  width: 100%;
+  height: 310px;
+}
+
+.donut-total {
+  fill: #1b1e2d;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.donut-label {
+  fill: #858a9c;
+  font-size: 11px;
+}
+
+.chart-empty {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888d9f;
+  font-size: 14px;
+}
+
+.reports-table-section {
+  background: #ffffff;
+  border: 1px solid #e7e9f0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.section-title {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.section-title h2 {
+  margin: 0 0 4px;
+  color: #1c1f2e;
+  font-size: 17px;
+}
+
+.section-title p {
+  margin: 0;
+  color: #858a9c;
+  font-size: 12px;
+}
+
+.record-count {
+  padding: 6px 10px;
+  border-radius: 5px;
+  background: #f5f6fa;
+  color: #6c7285;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+@media (max-width: 1200px) {
+  .report-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .reports-page {
+    padding: 20px;
+  }
+
+  .report-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filter-left {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .report-search {
+    width: 100%;
+  }
+
+  .filter-group {
+    flex: 1;
+  }
+
+  .refresh-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 650px) {
+  .reports-page {
+    padding: 15px;
+  }
+
+  .reports-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .reports-header-content h1 {
+    font-size: 23px;
+  }
+
+  .export-btn {
+    width: 100%;
+  }
+
+  .report-stats {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .filter-left {
+    flex-direction: column;
+  }
+
+  .report-search {
+    width: 100%;
+  }
+
+  .filter-group {
+    width: 100%;
+
+    flex: none;
+  }
+
+  .chart-card {
+    padding: 15px;
+  }
+
+  .chart-container {
+    height: 260px;
+  }
+
+  .bar-chart-container {
+    height: 260px;
+  }
+
+  .donut-container {
+    height: 280px;
+  }
+
+  .section-title {
+    padding: 15px;
+
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 400px) {
+  .reports-page {
+    padding: 10px;
+  }
+
+  .report-stat-card {
+    padding: 15px;
+  }
+
+  .stat-content h2 {
+    font-size: 22px;
+  }
+
+  .chart-heading {
+    align-items: flex-start;
+  }
+
+  .chart-label {
+    display: none;
+  }
+}
